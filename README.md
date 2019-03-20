@@ -13,7 +13,7 @@ In this case it is solved by utilising the file system locking mechanism.
       -n name       lock name, creates a file under /var/lock/mutex_${name}
       --            command to run with it's all arguments
 
-    Mutex locks in bash implemented with file locking with flock.
+    Mutex locks in bash implemented with flock.
     All processes started under the same lock name will run mutual exclusive.
 
 ## Test
