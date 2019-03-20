@@ -11,7 +11,7 @@ function show_help() {
     show_usage
     cat >&2 <<EOF
 
-  -n name       lock name, creates a file under /var/lock/mutex/\${name}
+  -n name       lock name, creates a file under /var/lock/mutex_\${name}
   --            command to run with it's all arguments
 
 Mutex locks in bash implemented with file locking with flock.
@@ -45,9 +45,7 @@ if [[ "$LOCK_NAME" == "" ]]; then
   exit 1
 fi
 
-LOCK_FILE="/var/lock/mutex/$LOCK_NAME"
-mkdir -p $(dirname "$LOCK_FILE")
-
+LOCK_FILE="/var/lock/mutex_$LOCK_NAME"
 
 : >>"$LOCK_FILE"
 {

@@ -10,7 +10,7 @@ In this case it is solved by utilising the file system locking mechanism.
 
     mutex [-h] -n name -- command arg1 arg2 .. argN
 
-      -n name       lock name, creates a file under /var/lock/mutex/${name}
+      -n name       lock name, creates a file under /var/lock/mutex_${name}
       --            command to run with it's all arguments
 
     Mutex locks in bash implemented with file locking with flock.
